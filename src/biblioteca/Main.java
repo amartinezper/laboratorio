@@ -13,6 +13,17 @@ public class Main {
 
         System.out.println("Salas de la biblioteca:");
         salas.forEach(System.out::println);
+
+        Reserva reserva = new ReservaBuilder()
+    .fecha(java.time.LocalDate.now().plusDays(7))
+    .horaInicio(java.time.LocalTime.of(14, 0))
+    .duracionHoras(2)
+    .cantidadPersonas(4)
+    .sala(new Sala("B", "Sala B", 4))
+    .build();
+
+System.out.println(reserva);
+
         // Aquí puedes agregar el código para ejecutar tu aplicación
     }
 }
