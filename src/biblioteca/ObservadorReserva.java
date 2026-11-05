@@ -1,5 +1,6 @@
 package biblioteca;
 
-public class ObservadorReserva {
-    
+public interface ObservadorReserva {
+    void actualizar(Reserva reserva, String estadoAnterior, String estadoNuevo);
 }
+
